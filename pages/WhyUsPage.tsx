@@ -1,10 +1,10 @@
 import React from 'react';
 import WhyUsSection from '../components/WhyUsSection';
 
-const WhyUsPage: React.FC = () => {
+function WhyUsPage() {
   return (
     <WhyUsSection />
   );
-};
+}
 
 export default WhyUsPage;
