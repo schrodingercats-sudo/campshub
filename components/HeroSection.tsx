@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-const HeroSection: React.FC = () => {
+function HeroSection() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center text-center overflow-hidden px-4">
       <div className="absolute top-0 left-0 w-full h-full bg-[#1A1A2E] z-0">
@@ -22,6 +22,6 @@ const HeroSection: React.FC = () => {
       </div>
     </section>
   );
-};
+}
 
 export default HeroSection;

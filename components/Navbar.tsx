@@ -5,7 +5,7 @@ interface NavbarProps {
   isScrolled: boolean;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
+function Navbar({ isScrolled }: NavbarProps) {
   const location = useLocation();
   const isSolid = isScrolled || location.pathname !== '/';
 
@@ -42,6 +42,6 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
       </div>
     </header>
   );
-};
+}
 
 export default Navbar;

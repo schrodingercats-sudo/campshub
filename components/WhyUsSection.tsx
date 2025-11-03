@@ -15,7 +15,7 @@ const benefits = [
   },
 ];
 
-const WhyUsSection: React.FC = () => {
+function WhyUsSection() {
   return (
     <section id="why-us" className="py-20 px-4 bg-[#1e1e38]/30">
       <div className="container mx-auto text-center max-w-7xl">
@@ -33,6 +33,6 @@ const WhyUsSection: React.FC = () => {
       </div>
     </section>
   );
-};
+}
 
 export default WhyUsSection;
