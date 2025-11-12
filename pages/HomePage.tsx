@@ -4,7 +4,7 @@ import ServicesSection from '../components/ServicesSection';
 import WhyUsSection from '../components/WhyUsSection';
 import ContactSection from '../components/ContactSection';
 
-function HomePage() {
+const HomePage: React.FC = () => {
   return (
     <>
       <HeroSection />
@@ -13,6 +13,6 @@ function HomePage() {
       <ContactSection />
     </>
   );
-}
+};
 
 export default HomePage;

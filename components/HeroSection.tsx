@@ -1,7 +1,8 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function HeroSection() {
+const HeroSection: React.FC = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center text-center overflow-hidden px-4">
       <div className="absolute top-0 left-0 w-full h-full bg-[#1A1A2E] z-0">
@@ -16,12 +17,12 @@ function HeroSection() {
         <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
           From complex coding projects to standout presentations, Campus Hub delivers the custom, high-quality work you need to ace your semester.
         </p>
-        <a href="#services" className="bg-[#00F5D4] text-[#1A1A2E] font-bold py-3 px-8 rounded-full text-lg hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_20px_#00F5D4]">
+        <Link to="/services" className="bg-[#00F5D4] text-[#1A1A2E] font-bold py-3 px-8 rounded-full text-lg hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_20px_#00F5D4]">
           Explore Our Services
-        </a>
+        </Link>
       </div>
     </section>
   );
-}
+};
 
 export default HeroSection;

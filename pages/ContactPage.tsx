@@ -1,10 +1,10 @@
 import React from 'react';
 import ContactSection from '../components/ContactSection';
 
-function ContactPage() {
+const ContactPage: React.FC = () => {
   return (
     <ContactSection />
   );
-}
+};
 
 export default ContactPage;

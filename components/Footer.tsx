@@ -1,7 +1,7 @@
 import React from 'react';
 import { GithubIcon, InstagramIcon, LinkedInIcon } from './icons';
 
-function Footer() {
+const Footer: React.FC = () => {
   return (
     <footer className="bg-[#1e1e38]/30 border-t border-gray-800/50 py-8">
       <div className="container mx-auto px-6 text-center text-gray-400 max-w-7xl">
@@ -14,6 +14,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

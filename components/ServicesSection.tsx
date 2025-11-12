@@ -24,19 +24,17 @@ const services = [
   },
 ];
 
-function ServiceCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
-  return (
-    <div className="bg-[#1e1e38]/50 p-8 rounded-lg border border-gray-700/50 transition-all duration-300 hover:border-[#00F5D4]/50 hover:shadow-lg hover:-translate-y-2 hover:shadow-[#00F5D4]/10">
-      <div className="mb-4 text-[#00F5D4]">
-        {icon}
-      </div>
-      <h3 className="text-xl font-bold mb-2 text-white">{title}</h3>
-      <p className="text-gray-400">{description}</p>
+const ServiceCard: React.FC<{ icon: React.ReactNode; title: string; description: string }> = ({ icon, title, description }) => (
+  <div className="bg-[#1e1e38]/50 p-8 rounded-lg border border-gray-700/50 transition-all duration-300 hover:border-[#00F5D4]/50 hover:shadow-lg hover:-translate-y-2 hover:shadow-[#00F5D4]/10">
+    <div className="mb-4 text-[#00F5D4]">
+      {icon}
     </div>
-  );
-}
+    <h3 className="text-xl font-bold mb-2 text-white">{title}</h3>
+    <p className="text-gray-400">{description}</p>
+  </div>
+);
 
-function ServicesSection() {
+const ServicesSection: React.FC = () => {
   return (
     <section id="services" className="py-20 px-4">
       <div className="container mx-auto text-center max-w-7xl">
@@ -51,6 +49,6 @@ function ServicesSection() {
       </div>
     </section>
   );
-}
+};
 
 export default ServicesSection;

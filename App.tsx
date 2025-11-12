@@ -7,7 +7,7 @@ import ServicesPage from './pages/ServicesPage';
 import WhyUsPage from './pages/WhyUsPage';
 import ContactPage from './pages/ContactPage';
 
-function App() {
+const App: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -40,6 +40,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
