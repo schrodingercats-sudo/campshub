@@ -1,9 +1,12 @@
 import React from 'react';
 import ServicesSection from '../components/ServicesSection';
+import AnimatedSection from '../components/AnimatedSection';
 
 const ServicesPage: React.FC = () => {
   return (
-    <ServicesSection />
+    <AnimatedSection>
+      <ServicesSection />
+    </AnimatedSection>
   );
 };
 

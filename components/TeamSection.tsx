@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const teamMembers = [
   { name: 'Shiven' },
@@ -10,9 +11,13 @@ const teamMembers = [
 ];
 
 const TeamCard: React.FC<{ name: string }> = ({ name }) => (
-  <div className="bg-[#1e1e38]/50 p-8 rounded-lg border border-gray-700/50 transition-all duration-300 hover:border-[#00F5D4]/50 hover:shadow-lg hover:-translate-y-2 hover:shadow-[#00F5D4]/10">
+  <motion.div
+    className="bg-[#1e1e38]/50 p-8 rounded-lg border border-gray-700/50"
+    whileHover={{ scale: 1.05, y: -10, boxShadow: '0 0 20px #00F5D4', borderColor: '#00F5D4' }}
+    transition={{ duration: 0.3 }}
+  >
     <h3 className="text-xl font-bold mb-2 text-white">{name}</h3>
-  </div>
+  </motion.div>
 );
 
 const TeamSection: React.FC = () => {

@@ -1,9 +1,12 @@
-import React from 'react';
-import WhyUsSection from '../components/WhyUsSection';
+import React from "react";
+import WhyUsSection from "../components/WhyUsSection";
+import AnimatedSection from "../components/AnimatedSection";
 
 const WhyUsPage: React.FC = () => {
   return (
-    <WhyUsSection />
+    <AnimatedSection>
+      <WhyUsSection />
+    </AnimatedSection>
   );
 };
 
