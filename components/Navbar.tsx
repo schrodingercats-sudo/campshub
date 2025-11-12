@@ -13,6 +13,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
     { name: 'Home', to: '/' },
     { name: 'Services', to: '/services' },
     { name: 'Why Us?', to: '/why-us' },
+    { name: 'About', to: '/about' },
     { name: 'Contact', to: '/contact' },
   ];
 
