@@ -1,37 +1,42 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { CodeIcon, DocumentIcon, PresentationIcon, WandIcon } from './icons';
 
 const services = [
   {
-    icon: <CodeIcon />,
+    Icon: CodeIcon,
     title: 'Project Creation',
     description: 'Custom technical and creative projects built from scratch to meet your exact requirements.',
   },
   {
-    icon: <DocumentIcon />,
+    Icon: DocumentIcon,
     title: 'Reports & Docs',
     description: 'Professionally written reports and documentation to clearly explain your work and secure top marks.',
   },
   {
-    icon: <PresentationIcon />,
+    Icon: PresentationIcon,
     title: 'Presentation Design',
     description: 'Sleek, engaging presentations designed to captivate your audience and showcase your findings.',
   },
   {
-    icon: <WandIcon />,
+    Icon: WandIcon,
     title: 'On-Demand Tasks',
     description: 'Need something else? We handle all types of paid academic and tech-based tasks on request.',
   },
 ];
 
-const ServiceCard: React.FC<{ icon: React.ReactNode; title: string; description: string }> = ({ icon, title, description }) => (
-  <div className="bg-[#1e1e38]/50 p-8 rounded-lg border border-gray-700/50 transition-all duration-300 hover:border-[#00F5D4]/50 hover:shadow-lg hover:-translate-y-2 hover:shadow-[#00F5D4]/10">
+const ServiceCard: React.FC<{ Icon: React.ElementType; title: string; description: string }> = ({ Icon, title, description }) => (
+  <motion.div
+    className="bg-[#1e1e38]/50 p-8 rounded-lg border border-gray-700/50"
+    whileHover={{ scale: 1.05, y: -10, boxShadow: '0 0 20px #00F5D4', borderColor: '#00F5D4' }}
+    transition={{ duration: 0.3 }}
+  >
     <div className="mb-4 text-[#00F5D4]">
-      {icon}
+      <Icon />
     </div>
     <h3 className="text-xl font-bold mb-2 text-white">{title}</h3>
     <p className="text-gray-400">{description}</p>
-  </div>
+  </motion.div>
 );
 
 const ServicesSection: React.FC = () => {
